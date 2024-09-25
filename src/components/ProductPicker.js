@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ProductPicker() {
+  let navigate = useNavigate();
+
   return (
-    <div>
-      <h1>Select Products</h1>
-      {/* Add your product selection logic here */}
-      <Link to="/">Back to Home</Link>
+    <div className="container">
+      <h1>Monk Upsell & Cross-sell</h1>
+      <button onClick={() => navigate('/products')}>Select Product</button>
+      <button onClick={() => navigate('/discounts')}>Add Discount</button>
     </div>
   );
 }
